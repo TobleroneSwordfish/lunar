@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[ext_resource path="res://assets/ui_box.png" type="Texture" id=1]
+
+[resource]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 100, 100 )
+margin_left = 11.4401
+margin_right = 11.5573
+margin_top = 12.5621
+margin_bottom = 11.6535
