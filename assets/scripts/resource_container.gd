@@ -1,11 +1,16 @@
 extends Node
 class_name ResourceContainer
 
-var limit : = 100.0
+export var limit : = 100.0
 var value : float setget set_value , get_value
-var resource_type : String
+export var resource_type : String
+export var is_input : = false
+export var is_output : = false
 
 signal value_changed(new_value)
+
+func get_space():
+	return limit - value
 
 # attempts to add amount to the tank, returns the amount that was actually added
 # should work for negatives
