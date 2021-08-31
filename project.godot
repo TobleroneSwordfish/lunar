@@ -48,6 +48,11 @@ _global_script_classes=[ {
 "class": "Selectable",
 "language": "GDScript",
 "path": "res://assets/scripts/selectable.gd"
+}, {
+"base": "Construct",
+"class": "SolarPanel",
+"language": "GDScript",
+"path": "res://scenes/solar_panel.gd"
 } ]
 _global_script_class_icons={
 "Bot": "",
@@ -57,7 +62,8 @@ _global_script_class_icons={
 "Hideable": "",
 "LiveLabel": "",
 "ResourceContainer": "",
-"Selectable": ""
+"Selectable": "",
+"SolarPanel": ""
 }
 
 [application]
