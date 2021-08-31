@@ -1,6 +1,7 @@
 extends Hideable
 
 const constructs_path = "res://scenes/constructs/"
+const ignore_list = ["Construct", "Processor", "TestProcessor"]
 onready var item_list = $CanvasLayer/ItemList
 onready var cursor_tracker = preload("res://scenes/CursorTracker.tscn")
 onready var build_target = preload("res://scenes/BuildTarget.tscn")
@@ -13,7 +14,9 @@ var hologram : Node = null
 func _ready():
 	var filenames = get_filenames(constructs_path)
 	for filename in filenames:
-		if not filename.ends_with("tscn"):
+		var without_ext = filename
+		without_ext.erase(filename.length() - ".tscn".length(), ".tscn".length())
+		if not filename.ends_with("tscn") or ignore_list.has(without_ext):
 			continue
 		var construct = load(constructs_path + filename).instance(0)
 		construct.position = Vector2(0,0)
