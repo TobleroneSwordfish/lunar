@@ -13,6 +13,7 @@ func on_selected():
 	InfoUI.show()
 	InfoUI.describe(self.get_info(), self)
 func on_deselected():
+	InfoUI.clear()
 	InfoUI.hide()
 
 # should return a dict of info about the construct

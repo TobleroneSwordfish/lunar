@@ -25,6 +25,8 @@ func request_select(node):
 func _process(delta):
 	# same thing being selected again
 	if get_tree().get_nodes_in_group("selected") == select_requests:
+		if select_requests != []:
+			print("reselecting " + str(select_requests))
 		return
 	if deselect_attempt:
 		clear_selection()

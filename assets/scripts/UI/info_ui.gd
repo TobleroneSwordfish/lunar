@@ -6,11 +6,15 @@ onready var _live_label = preload("res://scenes/LiveLabel.tscn")
 
 var describing : Node
 
+func clear():
+	if get_tree() != null:
+		get_tree().call_group("info_ui_labels", "free")
+
 # the dreaded ui megafunction
 func describe(info : Dictionary, node : Node):
 	describing = node
 	# delete old labels
-	get_tree().call_group("info_ui_labels", "free")
+	clear()
 	# generate new ones
 	for key in info.keys():
 		var value
