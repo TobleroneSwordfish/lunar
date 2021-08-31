@@ -23,10 +23,11 @@ func request_select(node):
 	select_requests.append([node.z_index, node])
 
 func _process(delta):
-	# same thing being selected again
-	if get_tree().get_nodes_in_group("selected") == select_requests:
-		if select_requests != []:
-			print("reselecting " + str(select_requests))
+	# same single node being selected again
+	if len(select_requests) == 1 and get_tree().get_nodes_in_group("selected") == [select_requests[0][1]]:
+#		print("reselecting " + str(select_requests))
+		select_requests = []
+		deselect_attempt = false
 		return
 	if deselect_attempt:
 		clear_selection()
