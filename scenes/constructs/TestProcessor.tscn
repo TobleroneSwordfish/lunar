@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/scripts/constructs/test_processor.gd" type="Script" id=1]
+[ext_resource path="res://assets/constructs/construct.png" type="Texture" id=2]
+[ext_resource path="res://assets/scripts/resource_container.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.7375, 15.9796 )
+
+[node name="Processor" type="Area2D"]
+position = Vector2( 79.7574, 94.3874 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource( 3 )
+resource_type = "Thingy"
+is_input = true
+
+[node name="Output" type="Node" parent="."]
+script = ExtResource( 3 )
+resource_type = "Stuff"
+is_output = true

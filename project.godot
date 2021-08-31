@@ -63,6 +63,11 @@ _global_script_classes=[ {
 "class": "SolarPanel",
 "language": "GDScript",
 "path": "res://scenes/solar_panel.gd"
+}, {
+"base": "Processor",
+"class": "SolidElectrolyzer",
+"language": "GDScript",
+"path": "res://assets/scripts/constructs/solid_electrolyzer.gd"
 } ]
 _global_script_class_icons={
 "Bot": "",
@@ -75,7 +80,8 @@ _global_script_class_icons={
 "Recipe": "",
 "ResourceContainer": "",
 "Selectable": "",
-"SolarPanel": ""
+"SolarPanel": "",
+"SolidElectrolyzer": ""
 }
 
 [application]

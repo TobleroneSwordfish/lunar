@@ -15,9 +15,9 @@ func _ready():
 	for child in children:
 		if child is ResourceContainer:
 			if child.is_input:
-				_input_containers.add(child)
+				_input_containers.append(child)
 			if child.is_output:
-				_output_containers.add(child)
+				_output_containers.append(child)
 				
 # this function does possibly too much work, too bad
 
